@@ -21,13 +21,13 @@
         }
 
         function getParentPosts(){
-            $sql = 'SELECT id,title,short_contents,thumbail FROM posts WHERE category_id is Null';
+            $sql = "SELECT id,title,short_contents,thumbail FROM posts WHERE category_id is Null";
             $results = $this->conn->query($sql);
-            $categories = array();
+            $posts = array();
             while ($row = $results->fetch_assoc()) {
-              $categories[] = $row;
+              $posts[] = $row;
             }
-            return $categories;
+            return $posts;
         }
 
         function find($id){

@@ -10,7 +10,7 @@
         function detail(){
             $id = $_GET['id'];
             $model = new Posts();
-            $posts = $model->find($id);
+            $pot = $model->find($id);
             require_once 'views/posts/detail.php';
         }
 
@@ -37,7 +37,7 @@
             $id = $_GET['id'];
             $model = new Posts();
             $posts = $model->getParentPosts();
-            $posts = $model->find($id);
+            $pot = $model->find($id);
             require_once 'views/posts/edit.php';
         }
       

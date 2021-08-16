@@ -21,15 +21,15 @@
         <form action="?mod=posts&act=update" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">Title</label>
-                <input type="hidden" name="id" value="<?= $posts['id'] ?>">
-                <input type="text" class="form-control" id="" placeholder="" name="name" value="<?= $posts['title'] ?>">
+                <input type="hidden" name="id" value="<?= $pot['id'] ?>">
+                <input type="text" class="form-control" id="" placeholder="" name="name" value="<?= $pot['title'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Contents</label>
-                <input type="text" class="form-control" id="" placeholder="" name="contents" value="<?= $posts['short_contents'] ?>">
+                <input type="text" class="form-control" id="" placeholder="" name="contents" value="<?= $pot['short_contents'] ?>">
             </div>
             <div>
-                <img src="<?= $posts['thumbail'] ?>" alt="" width="120px" height="120px">
+                <img src="<?= $pot['thumbail'] ?>" alt="" width="120px" height="120px">
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
