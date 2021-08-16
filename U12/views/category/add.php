@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
-                <input type="file" class="form-control" id="" placeholder="" name="thumbnail">
+                <input type="file" class="form-control" id="" placeholder="" name="avatar">
             </div>
             <div class="form-group">
                 <label for="">Parent</label>

@@ -1,5 +1,6 @@
 <?php 
     require_once 'models/Connection.php';
+    require_once 'UploadFile.php';
     class posts{
         var $conn;
 
@@ -20,10 +21,9 @@
         }
 
         function getParentPosts(){
-            $sql = 'SELECT id,title,avatar,desception FROM categories WHERE parent_id is Null';
+            $sql = 'SELECT id,title,short_contents,thumbail FROM posts WHERE category_id is Null';
             $results = $this->conn->query($sql);
             $categories = array();
-      
             while ($row = $results->fetch_assoc()) {
               $categories[] = $row;
             }
@@ -36,9 +36,14 @@
         }
 
         function insert($data){
-            $sql = "INSERT INTO posts (title,short_contents,thumbail) VALUES ('".$data['name']."','".$data['description']."')";
+            $sql = "INSERT INTO posts (title,short_contents,thumbail,category_id) VALUES ('".$data['title']."','".$data['contents']."','".$data['thumbail']."','".$data['category_id']."')";
             return $this->conn->query($sql);
-          }
+        }
+
+        function update($data){
+            $sql = "UPDATE posts SET title = '".$data['title']."', short_contents = '".$data['contents']."', thumbail = '".$data['thumbail']."', category_id = '".$data['category_id']."' WHERE id = ".$data['id'];
+            return $this->conn->query($sql);
+        }
 
         function delete($id){
             $sql = "DELETE FROM posts WHERE id = ".$id;

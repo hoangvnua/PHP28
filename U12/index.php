@@ -45,6 +45,15 @@
         case 'detail':
           $ps->detail();
           break;
+        case 'store':
+          $ps->store();
+          break;
+        case 'edit':
+          $ps->edit();
+          break;
+        case 'update':
+          $ps->update();
+          break;
         case 'delete':
           $ps->delete();
           break;

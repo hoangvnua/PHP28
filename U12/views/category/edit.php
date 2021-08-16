@@ -28,6 +28,22 @@
                 <label for="">Description</label>
                 <input type="text" class="form-control" id="" placeholder="" name="desception" value="<?= $category['desception'] ?>">
             </div>
+            <div>
+                <img src="<?= $category['avatar'] ?>" alt="" width="120px" height="120px">
+            </div>
+            <div class="form-group">
+                <label for="">Thumbnail</label>
+                <input type="file" class="form-control" id="" placeholder="" name="avatar">
+            </div>
+            <div class="form-group">
+                <label for="">Parent</label>
+                <select name="parent_id" class="form-control">
+                  <option value="0">Danh mục cha</option>
+                  <?php foreach ($categories as $cate) {?>
+                    <option value="<?= $cate['id'] ?>"><?= $cate['cate_name'] ?></option>
+                  <?php } ?>
+                </select>
+            </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>

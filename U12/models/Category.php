@@ -1,5 +1,6 @@
 <?php
   require_once 'models/Connection.php';
+  require_once 'UploadFile.php';
   class Category{
     var $conn;
 
@@ -36,26 +37,13 @@
     }
 
     function insert($data){
-      require_once 'common.php';
-
-      $upload = uploadFile('thumbnail', 'images', array('jpg','jpeg','png','gif'), 2, true);
-      if($upload[0] == true){
-        if($_POST['parent_id'] != 0){
-          $sql = "INSERT INTO categories (cate_name,desception,parent_id,thumbnail,slug)
-          VALUES ('".$_POST['cate_name']."','".$_POST['description']."','".$_POST['parent_id']."','".$upload[1]."','".create_slug($_POST['name'])."')";
-        }else{
-          $sql = "INSERT INTO categories (cate_name,desception,thumbnail,slug)
-          VALUES ('".$_POST['cate_name']."','".$_POST['description']."','".$upload[1]."','".create_slug($_POST['name'])."')";
-
-        }
-        return $this->conn->query($sql);
-      }
-      
+      $sql = "INSERT INTO categories (cate_name,desception,avatar,parent_id) VALUES ('".$data['name']."','".$data['description']."','".$data['avatar']."','".$data['parent_id']."')";
+      return $this->conn->query($sql);
     }
 
 
     function update($data){
-      $sql = "UPDATE categories SET cate_name = '".$data['name']."', desception = '".$data['desception']."' WHERE id = ".$data['id'];
+      $sql = "UPDATE categories SET cate_name = '".$data['name']."', desception = '".$data['desception']."', avatar = '".$data['avatar']."', parent_id = '".$data['parent_id']."' WHERE id = ".$data['id'];
       return $this->conn->query($sql);
     }
 

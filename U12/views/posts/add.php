@@ -16,9 +16,9 @@
 <body>
     <div class="container">
     <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Add New Category</h3>
+    <h3 align="center">Add New Posts</h3>
     <hr>
-        <form action="?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
+        <form action="?mod=posts&act=store" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">Title</label>
                 <input type="text" class="form-control" id="" placeholder="" name="title">
@@ -29,11 +29,11 @@
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
-                <input type="file" class="form-control" id="" placeholder="" name="thumbnail">
+                <input type="file" class="form-control" id="" placeholder="" name="thumbail">
             </div>
             <div class="form-group">
                 <label for="">Parent</label>
-                <select name="parent_id" class="form-control">
+                <select name="category_id" class="form-control">
                   <option value="0">Danh mục cha</option>
                   <?php foreach ($posts as $ps) {?>
                     <option value="<?= $ps['id'] ?>"><?= $ps['title'] ?></option>

@@ -16,14 +16,39 @@
 
         function create(){
             $model = new Posts();
-            $categories = $model->getParentPosts();
+            $posts = $model->getParentPosts();
             require_once 'views/posts/add.php';
           }
       
         function store(){
             $data = $_POST;
+            $upload=uploadFile("thumbail",'publics/imagesposts',array('jpg','jpeg','png','gif'),10,true);
+                if($upload==true) {
+                    $data['thumbail']=$upload[1];
+                }
             $model = new Posts();
             $status = $model->insert($data);
+            if($status==true){
+                header('Location: index.php?mod=posts&act=list');
+            }
+        }
+
+        function edit(){
+            $id = $_GET['id'];
+            $model = new Posts();
+            $posts = $model->getParentPosts();
+            $posts = $model->find($id);
+            require_once 'views/posts/edit.php';
+        }
+      
+        function update(){
+            $data = $_POST;
+            $upload=uploadFile("thumbail",'publics/imagesposts',array('jpg','jpeg','png','gif'),10,true);
+            if($upload==true) {
+                $data['thumbail']=$upload[1];
+            }
+            $model = new Posts();
+            $status = $model->update($data);
             if($status==true){
               header('Location: index.php?mod=posts&act=list');
             }
