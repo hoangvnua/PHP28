@@ -16,7 +16,7 @@
 
         function create(){
             $model = new Posts();
-            $posts = $model->getParentPosts();
+            $posts = $model->getAll();
             require_once 'views/posts/add.php';
           }
       

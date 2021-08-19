@@ -17,7 +17,7 @@ require_once 'models/Category.php';
 
     function create(){
       $model = new Category();
-      $categories = $model->getParentCategory();
+      $categories = $model->getAll();
       require_once 'views/category/add.php';
     }
 

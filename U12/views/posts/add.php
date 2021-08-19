@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label for="">Short_contents</label>
-                <input type="text" class="form-control" id="" placeholder="" name="contents">
+                <input type="text" class="form-control" id="" placeholder="" name="short_contents">
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>

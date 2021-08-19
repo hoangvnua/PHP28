@@ -26,9 +26,9 @@
             </div>
             <div class="form-group">
                 <label for="">Contents</label>
-                <input type="text" class="form-control" id="" placeholder="" name="contents" value="<?= $pot['short_contents'] ?>">
+                <input type="text" class="form-control" id="" placeholder="" name="short_contents" value="<?= $pot['short_contents'] ?>">
             </div>
-            <div>
+            <!-- <div>
                 <img src="<?= $pot['thumbail'] ?>" alt="" width="120px" height="120px">
             </div>
             <div class="form-group">
@@ -43,7 +43,7 @@
                     <option value="<?= $ps['id'] ?>"><?= $ps['title'] ?></option>
                   <?php } ?>
                 </select>
-            </div>
+            </div> -->
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
