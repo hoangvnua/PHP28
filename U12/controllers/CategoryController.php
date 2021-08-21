@@ -1,24 +1,39 @@
 <?php
+require_once 'BaseController.php';
 require_once 'models/Category.php';
-  class CategoryController{
+  class CategoryController extends BaseController{
+
+    public function __construct()
+    {
+      if (!$_SESSION['is_login']){
+        $this->redirect('?mod=auth&act=login_form');
+      }
+    }
+
     function list(){
       $model = new Category();
       $categories = $model->getAll();
       //Đổ lên view
-      require_once 'views/category/list.php';
+      $this->view('category/list',[
+        'categories' => $categories
+      ]);
     }
 
     function detail(){
       $id = $_GET['id'];
       $model = new Category();
       $category = $model->find($id);
-      require_once 'views/category/detail.php';
+      $this->view('category/detail',[
+        'categories' => $category
+      ]);
     }
 
     function create(){
       $model = new Category();
       $categories = $model->getAll();
-      require_once 'views/category/add.php';
+      $this->view('category/add',[
+        'category' => $categories
+      ]);
     }
 
     function store(){
@@ -30,7 +45,7 @@ require_once 'models/Category.php';
       $model = new Category();
       $status = $model->insert($data);
       if ($status==true) {
-        header('Location: index.php?mod=category&act=list');
+        $this->redirect('?mod=category&act=list');
       }
     }
 
@@ -39,7 +54,9 @@ require_once 'models/Category.php';
       $model = new Category();
       $categories = $model->getParentCategory();
       $category = $model->find($id);
-      require_once 'views/category/edit.php';
+      $this->view('category/edit',[
+        'category' => $category
+      ]);
     }
 
     function update(){
@@ -51,7 +68,7 @@ require_once 'models/Category.php';
       $model = new Category();
       $status = $model->update($data);
       if($status==true){
-        header('Location: index.php?mod=category&act=list');
+        $this->redirect('?mod=category&act=list');
       }
     }
 
@@ -60,7 +77,7 @@ require_once 'models/Category.php';
       $model = new Category();
       $status = $model->delete($id);
       if($status==true){
-        header('Location: index.php?mod=category&act=list');
+        $this->redirect('?mod=category&act=list');
       }
     }
   }

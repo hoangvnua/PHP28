@@ -1,6 +1,8 @@
 <?php
-  $mod = $_GET['mod'];
-  $act = $_GET['act'];
+  session_start();
+
+  $mod = (isset($_GET['mod'])?$_GET['mod']:'category');
+	$act = (isset($_GET['act'])?$_GET['act']:'list');
 
   switch ($mod) {
     case 'category':
@@ -62,6 +64,22 @@
           break;
       }
       break;
+
+      case 'auth':
+        require_once 'controllers/Auth/AuthController.php';
+        $auth = new AuthController();
+        switch($act){
+          case 'login_form':
+            $auth->getFormLogin();
+            break;
+          case 'login':
+            $auth->login();
+            break;
+          case 'logout':
+            $auth->logout();
+            break;
+        }
+        break;
     default:
       // code...
       break;
