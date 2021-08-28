@@ -5,7 +5,7 @@
     <h3 align="center">Zent - Education And Technology Group</h3>
     <h3 align="center">Add New Category</h3>
     <hr>
-        <form action="?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
+        <form action="?admin=admin&mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" class="form-control" id="" placeholder="" name="cate_name">

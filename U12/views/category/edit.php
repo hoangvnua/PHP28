@@ -18,7 +18,7 @@
     <h3 align="center">DevMind - Education And Technology Group</h3>
     <h3 align="center">Add New Category</h3>
     <hr>
-        <form action="?mod=category&act=update" method="POST" role="form" enctype="multipart/form-data">
+        <form action="?admin=admin&mod=category&act=update" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="hidden" name="id" value="<?= $category['id'] ?>">

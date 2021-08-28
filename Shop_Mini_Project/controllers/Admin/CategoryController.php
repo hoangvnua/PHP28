@@ -1,12 +1,12 @@
 <?php
-require_once 'BaseController.php';
+require_once 'controllers/BaseController.php';
 require_once 'models/Category.php';
   class CategoryController extends BaseController{
 
     public function __construct()
     {
       if (!$_SESSION['is_login']){
-        $this->redirect('?mod=auth&act=login_form');
+        $this->redirect('?admin=auth&mod=auth&act=getFormLogin');
       }
     }
 
@@ -45,14 +45,14 @@ require_once 'models/Category.php';
       $model = new Category();
       $status = $model->insert($data);
       if ($status==true) {
-        $this->redirect('?mod=category&act=list');
+        $this->redirect('?admin=admin&mod=category&act=list');
       }
     }
 
     function edit(){
       $id = $_GET['id'];
       $model = new Category();
-      $categories = $model->getParentCategory();
+      $categories = $model->getAll();
       $category = $model->find($id);
       $this->view('category/edit',[
         'category' => $category
@@ -68,7 +68,7 @@ require_once 'models/Category.php';
       $model = new Category();
       $status = $model->update($data);
       if($status==true){
-        $this->redirect('?mod=category&act=list');
+        $this->redirect('?admin=admin&mod=category&act=list');
       }
     }
 
@@ -77,7 +77,7 @@ require_once 'models/Category.php';
       $model = new Category();
       $status = $model->delete($id);
       if($status==true){
-        $this->redirect('?mod=category&act=list');
+        $this->redirect('?admin=admin&mod=category&act=list');
       }
     }
   }

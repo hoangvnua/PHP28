@@ -17,7 +17,7 @@
     <div class="container">
         <h3 class="text-center">--- CATEGORIES ---</h3>
         <h4>Xin chào: <?php if($_SESSION['auth']) { echo $_SESSION['auth']['name'] ;}?></h4>
-        <a href="?mod=category&act=create" class="btn btn-primary">Add New Category</a>
+        <a href="?admin=admin&mod=category&act=create" class="btn btn-primary">Add New Category</a>
         <table class="table">
             <thead>
                 <th>ID</th>
@@ -35,15 +35,15 @@
                 </td>
                 <td><?= $cate['desception']; ?></td>
                 <td>
-                    <a href="index.php?mod=category&act=detail&id=<?= $cate['id']?>" class="btn btn-primary">Detail</a>
-                    <a href="index.php?mod=category&act=edit&id=<?= $cate['id']; ?>" class="btn btn-success">Edit</a>
-                    <a href="index.php?mod=category&act=delete&id=<?= $cate['id']; ?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?admin=admin&mod=category&act=detail&id=<?= $cate['id']?>" class="btn btn-primary">Detail</a>
+                    <a href="index.php?admin=admin&mod=category&act=edit&id=<?= $cate['id']; ?>" class="btn btn-success">Edit</a>
+                    <a href="index.php?admin=admin&mod=category&act=delete&id=<?= $cate['id']; ?>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
           <?php } ?>
             <tr>
                 <td>
-                    <a href="?mod=auth&act=logout" class="btn btn-primary">Logout</a>
+                    <a href="index.php?admin=auth&mod=auth&act=logout" class="btn btn-primary">Logout</a>
                 </td>
             </tr>
         </table>
