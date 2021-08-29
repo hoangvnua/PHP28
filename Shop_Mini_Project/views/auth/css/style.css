@@ -181,10 +181,14 @@ button {
 
 /* Submits */
 
-.submits {
-    width: 100%;
+.sbm {
+    width: 48%;
     float: left;
     margin-left: 2%;
+}
+
+.other {
+    display: inline-flex;
 }
 
 

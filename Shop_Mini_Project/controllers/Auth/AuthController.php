@@ -11,7 +11,7 @@
             if ($user){
                 $_SESSION['auth'] = $user;
                 $_SESSION['is_login']= true;
-                $this->redirect('?admin=admin&mod=category&act=list');
+                $this->redirect('?admin=client&mod=home&act=home');
             } else {
                 $this->back();
             }
@@ -19,7 +19,7 @@
 
         public function getFormLogin(){
             if (isset($_SESSION['is_login'])){
-                $this->redirect('?admin=admin&mod=category&act=list');
+                $this->redirect('?admin=client&mod=home&act=home');
             }
             $this->view('auth/login');
         }

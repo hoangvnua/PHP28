@@ -3,18 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoangTu - đăng nhập hoặc đăng ký</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <title>Document</title>
     <link rel="stylesheet" href="views/auth/css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script type="text/javascript" src="views/auth/js/js.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
     <div class="overlay">
         <!-- LOGN IN FORM by Omar Dsoky -->
-        <form>
+        <form action="?admin=auth&mod=auth&act=login" method="POST" role="form" enctype="multipart/form-data">
             <!--   con = Container  for items in the form-->
             <div class="con">
                 <!--     Start  header Content  -->
@@ -32,7 +31,7 @@
                         <i class="fa fa-user-circle"></i>
                     </span>
                     <!--   user name Input-->
-                    <input class="form-input" id="txt-input" type="text" placeholder="@UserName" required>
+                    <input class="form-input" id="txt-input" type="email" name="email" placeholder="@UserName" required>
 
                     <br>
 
@@ -53,15 +52,15 @@
                     <br>
                     <!--        buttons -->
                     <!--      button LogIn -->
-                    <button class="log-in"> Log In </button>
+                    <button class="submits log-in"> Log In </button>
                 </div>
 
                 <!--   other buttons -->
                 <div class="other">
                     <!--      Forgot Password button-->
-                    <button class="btn submits frgt-pass">Forgot Password</button>
+                    <button class="btn sbm frgt-pass">Forgot Password</button>
                     <!--     Sign Up button -->
-                    <button class="btn submits sign-up">Sign Up
+                    <button class="btn sbm sign-up">Sign Up
                         <!--         Sign Up font icon -->
                         <i class="fa fa-user-plus" aria-hidden="true"></i>
                     </button>

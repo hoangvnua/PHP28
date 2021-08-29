@@ -56,17 +56,17 @@
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="copy-right">
-							<p>© 2015        <a href="#" class="privacy-policy">Privacy Policy</a></p>
+							<p>© 2021        <a href="#" class="privacy-policy">Privacy Policy</a></p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="contact-footer">
-							<p>My Company , Glasgow D04 89GR<br/>Call us now: 800-2345-6789</p>
+							<p>Nguyễn Văn Hoàng<br/>Call us now: 800-2345-6789</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="social-footer">
-							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.facebook.com/h0qgodbz/" target="__blank"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-twitter"></i></a>
 							<a href="#"><i class="fa fa-linkedin"></i></a>
 							<a href="#"><i class="fa fa-google-plus"></i></a>
@@ -78,10 +78,10 @@
 		</div>
 	</footer>
 	<!-- End Footer -->
-	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.js"></script>
-	<script type="text/javascript" src="js/theme.js"></script>
+	<script type="text/javascript" src="views/banner/js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="views/banner/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="views/banner/js/owl.carousel.js"></script>
+	<script type="text/javascript" src="views/banner/js/theme.js"></script>
 </div>	
 </body>
 </html>

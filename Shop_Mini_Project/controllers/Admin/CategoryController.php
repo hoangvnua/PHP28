@@ -23,7 +23,7 @@ require_once 'models/Category.php';
       $id = $_GET['id'];
       $model = new Category();
       $category = $model->find($id);
-      $this->view('category/detail',[
+      $this->view('home/home',[
         'categories' => $category
       ]);
     }
