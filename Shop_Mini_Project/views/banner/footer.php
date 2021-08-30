@@ -52,7 +52,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2 col-sm-6 col-xs-12">
-						<div class="logo-footer"><a href="#"><img src="images/home_1/logo.png" alt="" /></a></div>
+						<div class="logo-footer"><a href="#"><img src="views/banner/images/home_1/logo.png" alt="" /></a></div>
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="copy-right">

@@ -17,7 +17,7 @@
   $controllerObj = new $controllerClassName();
 
   if(!method_exists($controllerObj,$act)){
-    echo "Chức năng không tồn tại";
+    echo "Chức năng không tồn tại!";
     exit();
   }
 

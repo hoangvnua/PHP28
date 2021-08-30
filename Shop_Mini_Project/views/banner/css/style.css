@@ -19,7 +19,8 @@ body {
 }
 
 body.home-page {
-    background: url('../../../images/home_1/bg_header.jpg') no-repeat top center;
+    background: url('../images/home_1/bg_header.jpg') no-repeat top center;
+    z-index: 10000;
 }
 
 img,
@@ -72,7 +73,7 @@ a:visited {
 }
 
 .box-cat-toggle {
-    background: rgba(255, 255, 255, 0.9) url("../../../images/home_1/icon-cat-toggle.png") no-repeat scroll center center;
+    background: rgba(255, 255, 255, 0.9) url("../images/home_1/icon-cat-toggle.png") no-repeat scroll center center;
     display: block;
     height: 40px;
     width: 45px;
@@ -1420,7 +1421,7 @@ a:visited {
     margin: 0 15px 0 0;
     position: relative;
     vertical-align: top;
-    width: 20px;
+    width: 150px;
 }
 
 .header-info .box {

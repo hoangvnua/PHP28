@@ -14,12 +14,12 @@
         function getAll(){
             $sql = 'SELECT * FROM '.$this->table;
             $results = $this->conn->query($sql);
-            $categories = array();
+            $content_top_index = array();
       
             while ($row = $results->fetch_assoc()) {
-              $categories[] = $row;
+              $content_top_index[] = $row;
             }
-            return $categories;
+            return $content_top_index;
         }
       
         function find($id){

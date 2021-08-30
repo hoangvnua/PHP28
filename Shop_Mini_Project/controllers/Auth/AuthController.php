@@ -25,9 +25,9 @@
         }
 
         public function logout(){
-            $_SESSION['auth'] = null;
-            $_SESSION['is_login'] = false;
-            $this->redirect('index.php?admin=auth&mod=auth&act=login_form');
+            unset($_SESSION['auth']);
+            unset($_SESSION['is_login']);
+            $this->redirect('index.php?admin=auth&mod=auth&act=getFormLogin');
         }
     }
 ?>
