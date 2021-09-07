@@ -17,65 +17,17 @@
 		<div class="footer-quick-search">
 			<div class="container">
 				<div class="content-quick-search">
-					<label>Quick link:</label>
-					<a href="#">#</a>     
-					<a href="#">A</a>        
-					<a href="#">B</a>
-					<a href="#">C</a>
-					<a href="#">D</a>
-					<a href="#">E</a>
-					<a href="#">F</a>
-					<a href="#">G</a>
-					<a href="#">H</a>
-					<a href="#">I</a>
-					<a href="#">J</a>
-					<a href="#">K</a>
-					<a href="#">L</a>
-					<a href="#">M</a>
-					<a href="#">N</a>
-					<a href="#">O</a>
-					<a href="#">P</a>
-					<a href="#">Q</a>
-					<a href="#">R</a>
-					<a href="#">S</a>
-					<a href="#">U</a>
-					<a href="#">V</a>
-					<a href="#">W</a>
-					<a href="#">X</a>
-					<a href="#">Y</a>
-					<a href="#">Z</a>
+					<label>Designer by:</label>
+					<a href="#">Nguyễn Văn Hoàng</a>
+					<a href="https://www.facebook.com/h0qgodbz/" target="__blank"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-rss"></i></a>
 				</div>
 			</div>
 		</div>
 		<!-- End Quick Search -->
-		<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2 col-sm-6 col-xs-12">
-						<div class="logo-footer"><a href="#"><img src="views/banner/images/home_1/logo.png" alt="" /></a></div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="copy-right">
-							<p>© 2021        <a href="#" class="privacy-policy">Privacy Policy</a></p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="contact-footer">
-							<p>Nguyễn Văn Hoàng<br/>Call us now: 800-2345-6789</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="social-footer">
-							<a href="https://www.facebook.com/h0qgodbz/" target="__blank"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-linkedin"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-							<a href="#"><i class="fa fa-rss"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</footer>
 	<!-- End Footer -->
 	<script type="text/javascript" src="views/banner/js/jquery-1.12.0.min.js"></script>

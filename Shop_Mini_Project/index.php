@@ -1,9 +1,9 @@
 <?php
   session_start();
 
-  $admin = isset($_GET['admin']) ? $_GET['admin'] : 'client';
-  $mod = (isset($_GET['mod'])?$_GET['mod']:'home');
-	$act = (isset($_GET['act'])?$_GET['act']:'index');
+  $admin = isset($_GET['admin']) ? $_GET['admin'] : 'admin';
+  $mod = (isset($_GET['mod'])?$_GET['mod']:'admin');
+	$act = (isset($_GET['act'])?$_GET['act']:'list');
 
   $controllerClassName = ucfirst($mod). 'Controller';
   $path = 'controllers/' . ucfirst($admin) .'/'. $controllerClassName .'.php';

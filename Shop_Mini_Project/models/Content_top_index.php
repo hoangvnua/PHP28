@@ -1,6 +1,5 @@
 <?php
 require_once 'models.php';
-require_once 'UploadFile.php';
 
 class Content_top_index extends models
 {

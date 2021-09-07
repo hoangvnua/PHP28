@@ -5,7 +5,7 @@
 
         var $conn;
         var $table;
-
+    
         function __construct(){
             $connection = new Connection();
             $this->conn = $connection->conn;
@@ -14,19 +14,19 @@
         function getAll(){
             $sql = 'SELECT * FROM '.$this->table;
             $results = $this->conn->query($sql);
-            $content_top_index = array();
+            $content = array();
       
             while ($row = $results->fetch_assoc()) {
-              $content_top_index[] = $row;
+              $content[] = $row;
             }
-            return $content_top_index;
+            return $content;
         }
       
         function find($id){
             $sql = "SELECT * FROM ".$this->table." WHERE id = ".$id;
             return $this->conn->query($sql)->fetch_assoc();
         }
-      
+        
         function insert($data){
             $keys="";
             $values="";
@@ -47,8 +47,9 @@
                 $values .= $key."='".$value."',";
             }
             $values = trim($values,',');
+            
             $sql = "UPDATE ".$this->table." SET ".$values." WHERE id = ".$data['id'];
-
+            // print_r($sql);die();
             return $this->conn->query($sql);
         }
       
@@ -56,6 +57,5 @@
             $sql = "DELETE FROM ".$this->table." WHERE id = ".$id;
             return $this->conn->query($sql);
         }
-        
     }
 ?>

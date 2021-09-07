@@ -1392,6 +1392,22 @@ a:visited {
     padding-top: 15px;
 }
 
+#right {
+    float: right;
+}
+
+.header-info .box.box-account-lc .box-inner .bao .links i {
+    font-size: 30px;
+}
+
+.i1 {
+    color: yellow;
+}
+
+.i2 {
+    color: red;
+}
+
 .privacy-policy {
     margin-left: 15px;
     padding-left: 20px;
@@ -1436,10 +1452,11 @@ a:visited {
 }
 
 .header-info .box.box-account-lc .box-inner {
-    height: 162px;
-    padding: 24px 0 0 15px;
+    height: 500px;
+    padding: 10px 10px 10px 10px;
     right: -109px;
-    width: 410px;
+    width: 390px;
+    border-radius: 10px;
     background: #fff none repeat scroll 0 0;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
     float: left;
@@ -1490,90 +1507,49 @@ a:visited {
 }
 
 .header-info .box.box-account-lc:hover::after {
+    left: 144px;
     bottom: 0px;
     opacity: 1;
-}
-
-.header-info .box.box-account-lc .box-inner .links {
-    border-right: 1px solid #eaeaec;
-    float: left;
-    height: 116px;
-    width: 140px;
-}
-
-.header-info .box.box-account-lc .box-inner .links li {
-    padding-left: 24px;
-    float: left;
-    width: 100%;
-}
-
-.header-info .box.box-account-lc .box-inner .links li a.top-link-myaccount::before {
-    content: "";
-}
-
-.header-info .box.box-account-lc .box-inner .links li a.top-link-wishlist::before {
-    content: "";
-}
-
-.header-info .box.box-account-lc .box-inner .links li a.top-link-checkout::before {
-    content: "";
-}
-
-.header-info .box.box-account-lc .box-inner .links li a.top-link-login::before {
-    content: "";
-    left: -6px;
-}
-
-.header-info .box.box-account-lc .box-inner .links li a::before {
-    color: #666666;
-    content: "";
-    font-family: "FontAwesome";
-    left: -8px;
-    position: absolute;
-    top: 0;
-}
-
-.header-info .box.box-account-lc .box-inner .links li a {
-    padding-left: 17px;
-    position: relative;
-}
-
-.header-info .box.box-account-lc .box-inner ul li a {
-    color: #666666;
-    float: left;
-    line-height: 30px;
-    width: 100%;
-}
-
-.header-info .box.box-account-lc .box-inner ul li a:hover {
-    color: #ffc229;
-}
-
-.header-info .box.box-account-lc .box-inner .links li a:hover::before {
-    color: #ffc229;
-}
-
-.header-info .box.box-account-lc .box-inner .block-language {
-    padding: 0 18px 0 24px;
-    width: 145px;
-    border-right: 1px solid #eaeaec;
-    float: left;
-    height: 116px;
-}
-
-.header-info .box.box-account-lc .box-inner .block-language .lg-cur {
-    display: none;
-}
-
-.header-info .box.box-account-lc .box-inner ul {
-    float: left;
-    padding: 0;
-    width: 100%;
 }
 
 .header-info ul {
     list-style: outside none none;
     margin: 0;
+}
+
+.header-info .box.box-account-lc .box-inner .bao {
+    padding: 10px;
+}
+
+.header-info .box.box-account-lc .box-inner .bao .links {
+    padding: 5px;
+}
+
+.header-info .box.box-account-lc .box-inner .bao .links:hover {
+    background-color: rgb(216, 216, 216);
+    border-radius: 15px;
+}
+
+.header-info .box.box-account-lc .box-inner .bao .links img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.link-user-top {
+    float: right;
+}
+
+#hr1 {
+    height: 1.2px;
+    background-color: rgb(94, 94, 94);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header-info .box.box-account-lc .box-inner .links a {
+    padding: 0 0 0 10px;
+    color: #000;
 }
 
 .header-info .box.box-account-lc .box-inner ul li {
